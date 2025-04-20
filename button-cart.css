@@ -1,0 +1,38 @@
+/* Estilos gerais do botão */
+.add-to-cart {
+    all: unset;  /* Remove a aparência padrão do botão */
+    display: inline-block; /* Faz o botão se comportar como um link */
+    cursor: pointer; /* Cursor de ponteiro como links */
+    position: relative; /* Necessário para o posicionamento absoluto */
+  }
+  
+  /* Inicialmente, esconde o texto "Add to Cart" */
+  .add-to-cart .text {
+    display: none; /* Esconde o texto inicialmente */
+    font-weight: bold;
+    color: #007bff; /* Cor do texto do link */
+    position: absolute; /* Coloca o texto sobre o preço */
+    bottom: 0; /* Posiciona o texto na parte inferior do botão */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centraliza o texto */
+    transition: opacity 0.3s ease; /* Suaviza a transição de aparecer/desaparecer */
+  }
+  
+  /* Exibe o texto quando o mouse passar por cima */
+  .add-to-cart:hover .text {
+    display: block; /* Torna o texto visível */
+    opacity: 1; /* Torna o texto completamente visível */
+  }
+  
+  /* Exibe o preço inicialmente */
+  .add-to-cart .price {
+    color: #555; /* Cor suave para o preço */
+    font-size: 1.2em; /* Um pouco maior para o preço */
+  }
+  
+  /* Efeito de hover no preço */
+  .add-to-cart:hover .price {
+    opacity: 0.5; /* Faz o preço ficar mais suave quando passar o mouse */
+  }
+  
